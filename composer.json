@@ -16,6 +16,22 @@
         {
             "url": "https://github.com/t-ishida/loula.git",
             "type": "git"
+        },
+        {
+            "url": "https://github.com/aainc/Behoimi.git",
+            "type": "git"
+        },
+        {
+            "url": "https://github.com/aainc/Mahotora.git",
+            "type": "git"
+        },
+        {
+            "url": "https://github.com/aainc/Scruit.git",
+            "type": "git"
+        },
+        {
+            "url": "https://github.com/t-ishida/zaolik.git",
+            "type": "git"
         }
     ],
     "autoload": {
@@ -25,7 +41,11 @@
     },
     "require": {
         "aainc/hoimi": "dev-master",
-        "t_ishida/loula": "dev-master"
+        "aainc/behoimi": "dev-master",
+        "t_ishida/loula": "dev-master",
+        "t_ishida/zaolik": "dev-master",
+        "aainc/mahotora": "dev-master",
+        "aainc/scruit": "dev-master"
     },
     "require-dev": {
         "phing/phing": "2.*",

@@ -4,9 +4,51 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "dba51e8ec1b4ba4050a394af9c6015fc",
-    "content-hash": "5ef3d024e96802aaa35bb3d90b09a9c0",
+    "hash": "4ba7a428aec1b149fd7f6a31ab77dee9",
+    "content-hash": "77337026bb2dcde7cefe012a74188b19",
     "packages": [
+        {
+            "name": "aainc/behoimi",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aainc/Behoimi.git",
+                "reference": "ff537c168dc25d60a2fd5bcc49952631218f9d72"
+            },
+            "require": {
+                "aainc/hoimi": "dev-master",
+                "aainc/mahotora": "dev-master",
+                "aainc/scruit": "dev-master",
+                "t_ishida/loula": "dev-master",
+                "t_ishida/zaolik": "dev-master"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "1.10.2",
+                "phake/phake": "2.*",
+                "phing/phing": "2.*",
+                "phpdocumentor/phpdocumentor": "*",
+                "phpmd/phpmd": "~2.2",
+                "phpunit/phpunit": "3.7.*",
+                "sebastian/phpcpd": "2.x"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Behoimi\\": "src/Behoimi"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Takeshi Ishida",
+                    "email": "ishida@aainc.co.jp"
+                }
+            ],
+            "description": "yet another oauth server library",
+            "time": "2015-11-18 08:03:16"
+        },
         {
             "name": "aainc/hoimi",
             "version": "dev-master",
@@ -32,6 +74,58 @@
                 }
             ],
             "time": "2015-11-06 08:46:59"
+        },
+        {
+            "name": "aainc/mahotora",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aainc/Mahotora.git",
+                "reference": "1c43cf904a369be66a7086c33468b812d5e3beb8"
+            },
+            "require-dev": {
+                "phake/phake": "2.*",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mahotora\\": "src/Mahotora"
+                }
+            },
+            "authors": [
+                {
+                    "name": "t_ishida",
+                    "email": "ishida@aainc.co.jp"
+                }
+            ],
+            "time": "2015-11-06 09:30:41"
+        },
+        {
+            "name": "aainc/scruit",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aainc/Scruit.git",
+                "reference": "32236338800c320bb4f6d4b3ada869482e021a85"
+            },
+            "require-dev": {
+                "phake/phake": "2.*",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Scruit\\": "src/Scruit"
+                }
+            },
+            "authors": [
+                {
+                    "name": "t_ishida",
+                    "email": "ishida@aainc.co.jp"
+                }
+            ],
+            "time": "2015-11-18 03:37:29"
         },
         {
             "name": "t_ishida/loula",
@@ -66,6 +160,40 @@
             ],
             "description": "yet another cURL Wrapper",
             "time": "2015-11-17 05:56:02"
+        },
+        {
+            "name": "t_ishida/zaolik",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/t-ishida/zaolik.git",
+                "reference": "5e719ad4e02fb6c7d36cbe4813364902b25cb25a"
+            },
+            "require-dev": {
+                "phake/phake": "2.*",
+                "phpdocumentor/phpdocumentor": "*",
+                "phpmd/phpmd": "*",
+                "phpunit/phpunit": "*",
+                "sebastian/phpcpd": "*",
+                "squizlabs/php_codesniffer": "2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Zaolik\\": "src/Zaolik"
+                }
+            },
+            "license": [
+                "MIT License"
+            ],
+            "authors": [
+                {
+                    "name": "Takeshi Ishida",
+                    "email": "ishida@aainc.co.jp"
+                }
+            ],
+            "description": "yet another DIContainer",
+            "time": "2015-10-13 02:53:57"
         }
     ],
     "packages-dev": [
@@ -3035,12 +3163,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/validator.git",
-                "reference": "77d88a19bf99ab3e73fc76c69625078b773c1f06"
+                "reference": "84a4a1c2c38afbbb3ad96e127b284401caa34647"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/validator/zipball/77d88a19bf99ab3e73fc76c69625078b773c1f06",
-                "reference": "77d88a19bf99ab3e73fc76c69625078b773c1f06",
+                "url": "https://api.github.com/repos/symfony/validator/zipball/84a4a1c2c38afbbb3ad96e127b284401caa34647",
+                "reference": "84a4a1c2c38afbbb3ad96e127b284401caa34647",
                 "shasum": ""
             },
             "require": {
@@ -3099,7 +3227,7 @@
             ],
             "description": "Symfony Validator Component",
             "homepage": "https://symfony.com",
-            "time": "2015-10-30 20:15:42"
+            "time": "2015-11-17 01:04:18"
         },
         {
             "name": "symfony/yaml",
@@ -3196,12 +3324,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "9d5e74602634cdd1e7899cddcbded01bc584f7a8"
+                "reference": "db93842e80d758f6c74c3e1f1f088badb3fc84f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/9d5e74602634cdd1e7899cddcbded01bc584f7a8",
-                "reference": "9d5e74602634cdd1e7899cddcbded01bc584f7a8",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/db93842e80d758f6c74c3e1f1f088badb3fc84f0",
+                "reference": "db93842e80d758f6c74c3e1f1f088badb3fc84f0",
                 "shasum": ""
             },
             "require": {
@@ -3249,7 +3377,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-11-12 06:56:39"
+            "time": "2015-11-17 12:22:13"
         },
         {
             "name": "zendframework/zend-cache",
@@ -3979,7 +4107,11 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "aainc/hoimi": 20,
-        "t_ishida/loula": 20
+        "aainc/behoimi": 20,
+        "t_ishida/loula": 20,
+        "t_ishida/zaolik": 20,
+        "aainc/mahotora": 20,
+        "aainc/scruit": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

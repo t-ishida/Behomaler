@@ -16,23 +16,26 @@ class LoulaApplicationTest extends \PHPUnit_Framework_TestCase
      * @var \Behomaler\Loula\LoulaApplication
      */
     private $target = null;
+    private $client = null;
+    private $response = null;
     private $request = null;
     private $dummyHeaders = null;
     private $dummyParameters = null;
     private $dummyFiles = null;
     public function setUp()
     {
+        $this->client = \Phake::mock('\Loula\HttpClient');
         $this->request = \Phake::mock('\Behomaler\Loula\LoulaAdapter');
         $this->response = \Phake::mock('\Behomaler\Loula\LoulaAdapter');
         $this->dummyHeaders = array('REQUEST_URI' => '/dummy', 'REQUEST_METHOD' => 'POST');
         $this->dummyParameters = array('querySring' => 'value');
         $this->dummyFiles = array('files' => array('name' => 'xyzzy.jpg', 'tmp_name'  => '/tmp/hoge'));
-        $this->target = \Phake::partialMock('\Behomaler\Loula\LoulaApplication');
+        $this->target = \Phake::partialMock('\Behomaler\Loula\LoulaApplication', $this->client);
     }
 
     public function testRequest ()
     {
-        \Phake::when($this->target)->sendOne($this->request)->thenReturn(
+        \Phake::when($this->target->getClient())->sendOne($this->request)->thenReturn(
             new HttpResponse(
                 "HTTP/1.0 200 OK\r\n\r\n{'hoge':'fuga'}",
                 array('http_code' => 200)

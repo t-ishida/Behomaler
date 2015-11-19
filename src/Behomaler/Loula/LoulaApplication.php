@@ -4,8 +4,16 @@ use Behomaler\Application;
 use Behomaler\Request;
 use Behomaler\Response;
 
-abstract class LoulaApplication extends \Loula\HttpClient implements Application
+abstract class LoulaApplication implements Application
 {
+    /**
+     * @var \Loula\HttpClient
+     */
+    private $client = null;
+    public function __construct (\Loula\HttpClient $client)
+    {
+        $this->client = $client;
+    }
     public function getProtocolName()
     {
         return 'https';
@@ -27,7 +35,16 @@ abstract class LoulaApplication extends \Loula\HttpClient implements Application
         if (!($request instanceof LoulaAdapter)) {
             throw new \InvalidArgumentException('invalid request');
         }
-        $result = $this->sendOne($request);
+        $result = $this->client->sendOne($request);
         return new Response(explode("\n", $result->getHeader()), $result->getBody());
     }
+
+    /**
+     * @return \Loula\HttpClient
+     */
+    public function getClient()
+    {
+        return $this->client;
+    }
+
 }
